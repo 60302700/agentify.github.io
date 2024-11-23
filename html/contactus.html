@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <li id="logo"><a class="company-logo fas fa-cogs" href="../index.html"></a></li>
+                <li><a href="../index.html" >Home</a></li>
+                <li><a href="../html/products.html" >Products</a></li>
+                <li><a href="../html/contactus.html">Contact Us</a></li>
+                <li><a href="../html/subscribe.html" >Subscribe</a></li>
+            </nav>
+        </div>
+    </header>
+    <section id="contactsus">
+        <div id="formset">
+        <form id="subscribe" onsubmit="return ValidateContactus();" method="post" action="https://sit.udst.edu.qa/processform.php" id="form" >
+            <div>
+                <legend class="Head">Contact Us</legend>
+            <p><strong>Address:</strong><br>Arab League St, Doha, Qatar P.O. Box: 9F6J+7C Doha, Qatar</p>
+            <p><strong>P.O. Box:</strong><br>9F6J+7C Doha, Qatar</p>
+            <p><strong>Opening Hours: </strong><br>Sunday to Thursday: 7:30 AM – 3:30 PM <br> Closed on Fridays and Saturdays</p>
+            <iframe src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sUniversity+of+Doha+for+Science+and+Technology+-+UDST!6i13" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+            <div style="border-left: 1px solid white;"></div>
+            <fieldset>
+                    <div>
+                        <label>Name</label>
+                        <input class="min_input input_css" type="text" placeholder="Full Name" name="Full_Name" id="Full_Name" onblur="ValidateName(this,this)">
+                        </div>
+                        <span id="name_check"></span>
+                        <div>
+                            <label>Email</label>
+                            <input class="min_input input_css" type="text" placeholder="Username" name="Email" id="Email" onblur="Validatemail(this,this)">
+                            </div>
+                            <span id="email_check"></span>
+                            <div>
+                        <label>Phone</label>
+                        <input class="min_input input_css" type="text" placeholder="Username" name="Phone" id="Phone Number" onblur="ValidatePhone(this,this)">
+                        </div>
+                        <span id="phone_check"></span>
+                        <div>
+                        <label>Message</label>
+                        <textarea class="min_input input_css" style="height: 100px;" rows="2" cols="25" name="Message" id="Message" onblur="Validatemessage(this)"></textarea>
+                    </div>
+                    <span id="message_check"></span>
+                    <div class="buttons" style="display: flex;justify-content: center;gap:30px;margin-top: 30px;">
+                        <button type="submit" >Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                        </div>
+            </fieldset>
+        </form>
+    </div>
+    </section>
+    <div id="chatcontainer" style="display: flex;">
+        <div class="chat-icon fas fa-headset" id="chatButton" onclick="toggleChat()"></div>
+        <div class="chat-close" id="chatclose" onclick="toggleChat()" style="display: none;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg></div>
+        <iframe 
+            src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/21/10/20241121100914-HYDRA34N.json" 
+            class="chat-widget"
+            allow="microphone"
+            style="display: none;"
+            id="chatWidget">
+        </iframe>
+      </div>
+    <footer class="main-footer">
+        <div class="container">
+          <p>&copy; 2023 Agentify. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
