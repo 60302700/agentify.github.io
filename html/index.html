@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <title>Agentify</title>
+
+
+</head>
+<body>
+  <header>
+    <div>
+        <nav>
+          <li id="logo"><a class="company-logo fas fa-cogs" href="../html/index.html"></a></li>
+            <li><a href="../html/index.html" >Home</a></li>
+            <li><a href="../html/products.html" >Products</a></li>
+            <li><a href="../html/contactus.html">Contact Us</a></li>
+            <li><a href="../html/subscribe.html" >Subscribe</a></li>
+        </nav>
+    </div>
+</header>
+    <section>
+        <div>
+            <h1 class="Head">Introduction</h1>
+            <div style="display: flex;flex-direction: row-reverse;">
+              <p style="font-size: large;"><b>Welcome to Agentify</b> – your go-to platform for AI-powered assistance in managing everyday tasks. We specialize in providing versatile, on-demand AI agents to make life easier and more productive. Whether you need help with scheduling, managing social media, or customer support, Agentify offers reliable AI solutions that integrate seamlessly into your daily routine,<br> freeing up your time and streamlining your workflows.</p>
+              <i class="company-logo fas fa-cogs" style="font-size: 67px; padding: 50px;"></i>
+            </div>
+        </div>
+            <h1 class="Head">Featured Products</h1>
+            <div id="products">
+                <div class="agent"><h3>Customer Support Bot</h3><i class="fas fa-headset icons"></i><p> Stay on top of your tasks with our Task Manager AI. This agent organizes to-dos, sets reminders, and optimizes your schedule, making sure nothing slips through the cracks.</p></div>
+                <div class="agent"><h3>Task Manager AI</h3><i class="fas fa-tasks icons"></i><p> Keep your social media vibrant and engaging without any extra effort. Our Social Media Manager AI automatically creates, schedules, and interacts with posts based on your preferences and brand voice.</p></div>
+                <div class="agent"><h3>Social Media Manager AI</h3><i class="fas fa-share-alt icons"></i><p>Provide 24/7 support to your clients with an AI that can handle common inquiries, troubleshoot issues, and escalate cases as needed, ensuring excellent customer service at any hour.</p></div>
+            </div>
+            <div>
+                <h1 class="Head">Testimonials</h1>
+                <div class="Testimonials">
+                  <div class="reviews">
+                    <div class="company-info">
+                      <i class="company-logo fas fa-building"></i> <!-- Placeholder for company logo/icon -->
+                      <span>AIGentix Solutions</span>
+                    </div>
+                    <p>"The service was fantastic! I couldn’t be happier with the results. Definitely recommended to anyone looking for quality and professionalism."</p>
+                  </div>
+                  <div class="reviews">
+                    <div class="company-info">
+                      <i class="company-logo fas fa-industry"></i> <!-- Placeholder for company logo/icon -->
+                      <span>BotNexus Labs</span>
+                    </div>
+                    <p>"An outstanding experience from start to finish. The team was knowledgeable and attentive, making sure all my needs were met."</p>
+                  </div>
+                  <div class="reviews">
+                    <div class="company-info">
+                      <i class="company-logo fas fa-globe"></i><!-- Placeholder for company logo/icon -->
+                      <span>MindMesh Technologies</span>
+                    </div>
+                    <p>"I’m extremely satisfied with the results! The team made everything so easy, and the quality of work was exceptional."</p>
+                  </div>
+                  <div class="reviews">
+                    <div class="company-info">
+                      <i class="company-logo fas fa-briefcase"></i> <!-- Placeholder for company logo/icon -->
+                      <span>Agentica Systems</span>
+                    </div>
+                    <p>"A remarkable experience from start to finish. Highly recommend to anyone looking for efficiency and professionalism in service!"</p>
+                  </div>
+                </div>
+              </div> 
+    </section>
+    <!-- Footer -->
+    <div id="chatcontainer" style="display: flex;">
+      <div class="chat-icon fas fa-headset" id="chatButton" onclick="toggleChat()"></div>
+      <div class="chat-close" id="chatclose" onclick="toggleChat()" style="display: none;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg></div>
+      <iframe 
+          src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/21/10/20241121100914-HYDRA34N.json" 
+          class="chat-widget"
+          allow="microphone"
+          style="display: none;"
+          id="chatWidget">
+      </iframe>
+    </div>
+    
+<footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2023 Agentify. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

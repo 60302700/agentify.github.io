@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/8154bf50-7852-4e92-ad50-51119e518ce5/webchat/config.js" defer></script>
+    
+
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <li id="logo"><a class="company-logo fas fa-cogs" href="../html/index.html"></a></li>
+                <li><a href="../html/index.html" >Home</a></li>
+                <li><a href="../html/products.html" >Products</a></li>
+                <li><a href="../html/contactus.html">Contact Us</a></li>
+                <li id="Sub"><a href="../html/subscribe.html" >Subscribe</a></li>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div id="formset">
+            <form onsubmit="return ValidateForm();" method="post" action="https://sit.udst.edu.qa/processform.php" id="form">
+                <fieldset>
+                    <legend class="Head">Register</legend>
+                    <div class="grp_name">
+                        <div>
+                            <label>Full Name</label>
+                            <input class="min_input input_css" type="text" placeholder="Full Name" name="Full_Name" id="Full_Name" onblur="ValidateName(this)">
+                        </div>
+                        <div>
+                            <label>Username</label>
+                            <input class="min_input input_css" type="text" placeholder="Username" name="Username" id="Username">
+                        </div>
+                        <span id="name_check"></span>
+                    </div>
+                    <div class="grp_name">
+                        <div>
+                            <label>Password</label>
+                            <input class="min_input input_css" type="password" placeholder="Password" name="Password" id="Password" onblur="Validatepasswd(document.getElementById('Password'), document.getElementById('Confirm Password'))">
+                        </div>
+                        <div>
+                            <label>Confirm Password</label>
+                            <input class="min_input input_css" type="password" placeholder="Confirm Password" name="Confirm Password" id="Confirm Password" onblur="Validatepasswd(document.getElementById('Password'), this)">
+                        </div>
+                        <span id="passwd_check"></span>
+                    </div>
+                    <div class="grp_name">
+                        <div>
+                            <label>Phone Number</label>
+                            <input type="text" class="min_input input_css" placeholder="Phone Number" name="Phone Number" id="Phone Number" value="+974 " onblur="ValidatePhone(document.getElementById('Phone Number'), document.getElementById('Phone Number Confirm'))">
+                        </div>
+                        <div>
+                            <label>Confirm Phone Number</label>
+                            <input class="min_input input_css" type="text" value="+974 " placeholder="Phone Number" name="Phone Number Confirm" id="Phone Number Confirm" onblur="ValidatePhone(document.getElementById('Phone Number'), this)">
+                        </div>
+                        <span id="phone_check"></span>
+                    </div>
+                    <div class="grp_name">
+                        <div>
+                            <label>Email</label>
+                            <input type="text" class="min_input input_css" placeholder="Email" name="Email" id="Email" onblur="Validatemail(document.getElementById('Email'), document.getElementById('Email_Confirm'))">
+                        </div>
+                        <div>
+                            <label>Email Confirm</label>
+                            <input type="text" class="min_input input_css" placeholder="Email" name="Email_Confirm" id="Email_Confirm" onblur="Validatemail(document.getElementById('Email'), this)">
+                        </div>
+                        <span id="email_check"></span>
+                    </div>
+                </fieldset>
+                <fieldset style="margin-top: 30px;">
+                    <legend class="Head">Shipping Address</legend>
+                    <div class="grp_name">
+                        <div>
+                            <label>Bld no</label>
+                            <input type="text" name="Bld No" class="min_input input_css" id="bld" onblur="Bld_no(this)">
+                            <span id="bld_error"></span>
+                        </div>
+                        <div>
+                            <label>Street Name</label>
+                            <input type="text" name="street name" class="min_input input_css" id="street" onblur="Validatestreet(this)">
+                            <span id="street_error"></span>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <label for="city" style="margin-right: 10px;">Select City:</label>
+                        <select id="city" name="city">
+                            <option value="Doha" selected>Doha</option>
+                            <option value="Al Rayyan">Al Rayyan</option>
+                            <option value="Al Wakrah">Al Wakrah</option>
+                            <option value="Umm Salal Muhammad">Umm Salal Muhammad</option>
+                            <option value="Al Khor">Al Khor</option>
+                            <option value="Dukhan">Dukhan</option>
+                            <option value="Mesaieed">Mesaieed</option>
+                            <option value="Al Shamal">Al Shamal</option>
+                            <option value="Madinat ash Shamal">Madinat ash Shamal</option>
+                            <option value="Al Shahaniya">Al Shahaniya</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <div style="display: flex;justify-content: center;margin-top: 20px;">
+                    <label>
+                        Would You Like To Subscribe To Our Newsletter <input style="justify-content: center; margin: auto;" type="checkbox" value="True" name="Subscribe">
+                    </label>
+                </div>
+                <div class="buttons" style="display: flex;justify-content: center;gap:30px;margin-top: 30px;">
+                    <button type="submit" id="submitButton">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+        
+    </section>
+    <div id="chatcontainer" style="display: flex;">
+        <div class="chat-icon fas fa-headset" id="chatButton" onclick="toggleChat()"></div>
+        <div class="chat-close" id="chatclose" onclick="toggleChat()" style="display: none;align-items:flex-start;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+          </svg></div>
+        <iframe 
+            src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/21/10/20241121100914-HYDRA34N.json" 
+            class="chat-widget"
+            allow="microphone"
+            style="display: none;"
+            id="chatWidget">
+        </iframe>
+      </div>
+    <footer class="main-footer" style="padding: 20px;">
+        <div class="container">
+            <div>
+                <p>&copy; 2023 Agentify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
