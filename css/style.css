@@ -14,28 +14,26 @@ body {
     margin:auto;
 }
 
-nav {
+nav > ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     justify-content: space-evenly;
     background-color: #2C2E3E;
-    padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 0px;
     flex-direction: row;
-    border-bottom: 1px solid #F4F4F9;
-    align-items: center;
+    border-bottom: 1px solid #F4F4F9;   
 }
 
-nav > li > a{
+nav > ul > li > a{
     
     text-decoration: none;
     color: white;
     font-weight: 200;
 }
 
-nav > li > a:hover {
+nav > ul > li > a:hover {
     color: #00BCD4;
     transform: scale(1.2);
     transition: transform 0.3s ease;
