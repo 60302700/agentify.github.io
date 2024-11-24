@@ -122,7 +122,7 @@ function Validatestreet(street){
 
 function Bld_no(bld){
     error = document.getElementById('bld_error')
-    if (isNaN(bld)){
+    if (isNaN(parseInt(bld.value))){
         error.innerHTML = 'Please Enter About a Building Number'
         bld.style.border = 'red 3px solid'
         bld.style.width = '97%'
